@@ -7,6 +7,8 @@ Silber, K.M.*, T.J. Hefley, H. N. Castro-Miller, Z. R. Ratajczak, W.A. Boyle
 
 
 ### Data
+
+The following datasets were used within the analyses. Metadata for all datasets can be found here: XX
 ###### VegetationComposition_RawData.csv
 
 
