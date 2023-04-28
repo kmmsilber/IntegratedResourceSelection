@@ -16,7 +16,7 @@ Estimates of vegetation height (dm) collected during monthly sampling events on 
 ###### WatershedCovariates2021.csv
 
 ###### KNZPrecip.csv
-Estimates of Spring precipitation, breeding season precipitation lagged one year, and breeding season precipitation lagged two years at the Konza Prairie.
+Estimates of Spring precipitation, breeding season precipitation lagged one year, and breeding season precipitation lagged two years at the Konza Prairie. Raw dataset of daily precipitation amounts can be accessed here: http://lter.konza.ksu.edu/content/apt01-daily-precipitation-amounts-measured-multiple-sites-across-konza-prairie
 
 ###### EasternMeadowlarkData.csv
 ###### DickcisselData.csv
