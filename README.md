@@ -10,8 +10,18 @@ Silber, K.M.*, T.J. Hefley, H. N. Castro-Miller, Z. R. Ratajczak, W.A. Boyle
 
 The following datasets were used within the analyses. Metadata for all datasets can be found here: XX
 ###### VegetationComposition_RawData.csv
+Estimates of vegetation composition (i.e., % cover of plant functional groups) collected during monthly sampling events on Konza Prairie watersheds.
+###### VegetationHeight_RawData.csv
+Estimates of vegetation height (dm) collected during monthly sampling events on Konza Prairie watersheds.
+###### WatershedCovariates2021.csv
 
+###### KNZPrecip.csv
+Estimates of Spring precipitation, breeding season precipitation lagged one year, and breeding season precipitation lagged two years at the Konza Prairie.
 
+###### EasternMeadowlarkData.csv
+###### DickcisselData.csv
+###### GrasshopperSparrowData.csv
+###### GRSPLocations2021.csv
 
 ### Code
 
