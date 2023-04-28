@@ -3,10 +3,11 @@ This repository contains data and code for the manuscript titled "The long shado
 
 Silber, K.M.*, T.J. Hefley, H. N. Castro-Miller, Z. R. Ratajczak, W.A. Boyle 
 
-*Corresponding author. For any questions about the data or code, please contact Katy Silber (ksilber@ksu.edu)
+*Corresponding author. For any questions about the data or code, please contact Katy Silber (ksilber@ksu.edu).
 
 
 ### Data
+###### VegetationComposition_RawData.csv
 
 
 
