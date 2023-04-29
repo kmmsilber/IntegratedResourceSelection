@@ -8,20 +8,26 @@ Silber, K.M.*, T.J. Hefley, H. N. Castro-Miller, Z. R. Ratajczak, W.A. Boyle
 
 ### Data
 
-The following datasets were used within the analyses. Metadata for all datasets can be found here: XX
+##### IntegratedResourceSelectionModelMetadata.docx
+This file includes descriptions of the below datasets and the associated variables.
+
+The following datasets were used within the analyses. 
 ###### VegetationComposition_RawData.csv
 Estimates of vegetation composition (i.e., % cover of plant functional groups) collected during monthly sampling events on Konza Prairie watersheds.
 ###### VegetationHeight_RawData.csv
 Estimates of vegetation height (dm) collected during monthly sampling events on Konza Prairie watersheds.
 ###### WatershedCovariates2021.csv
-
+Management regimes (i.e., fire and grazing) and precipitation for each study unit in 2021.
 ###### KNZPrecip.csv
 Estimates of Spring precipitation, breeding season precipitation lagged one year, and breeding season precipitation lagged two years at the Konza Prairie. Raw dataset of daily precipitation amounts can be accessed here: http://lter.konza.ksu.edu/content/apt01-daily-precipitation-amounts-measured-multiple-sites-across-konza-prairie
-
 ###### EasternMeadowlarkData.csv
+Mark-resight data for Eastern Meadowlarks at the Konza Prairie, 2019-2021.
 ###### DickcisselData.csv
+Mark-resight data for Dickcissels at the Konza Prairie, 2019-2021.
 ###### GrasshopperSparrowData.csv
+Mark-resight data for Grasshopper Sparrows at the Konza Prairie, 2013-2020.
 ###### GRSPLocations2021.csv
+Mark-resight data for Grasshopper Sparrows at the Konza Prairie, 2021.
 
 ### Code
 
