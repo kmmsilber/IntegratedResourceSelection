@@ -12,7 +12,7 @@ Silber, K.M.*, T.J. Hefley, H. N. Castro-Miller, Z. R. Ratajczak, W.A. Boyle
 This file includes descriptions of the below datasets and the associated variables.
 
 The following datasets were used within the analyses. 
-###### (./VegetationComposition_RawData.csv)
+###### ./VegetationComposition_RawData.csv
 Estimates of vegetation composition (i.e., % cover of plant functional groups) collected during monthly sampling events on Konza Prairie watersheds.
 ###### VegetationHeight_RawData.csv
 Estimates of vegetation height (dm) collected during monthly sampling events on Konza Prairie watersheds.
