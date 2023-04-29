@@ -9,9 +9,8 @@ Silber, K.M.*, T.J. Hefley, H. N. Castro-Miller, Z. R. Ratajczak, W.A. Boyle
 ### Data
 
 ##### IntegratedResourceSelectionModelMetadata.docx
-This file includes descriptions of the below datasets and the associated variables.
+This file includes detailed descriptions of the below datasets and the associated variables.
 
-The following datasets were used within the analyses. 
 ###### VegetationComposition_RawData.csv
 Estimates of vegetation composition (i.e., % cover of plant functional groups) collected during monthly sampling events on Konza Prairie watersheds.
 ###### VegetationHeight_RawData.csv
