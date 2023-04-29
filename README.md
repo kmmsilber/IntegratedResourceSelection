@@ -16,6 +16,8 @@ The following datasets were used within the analyses.
 Estimates of vegetation composition (i.e., % cover of plant functional groups) collected during monthly sampling events on Konza Prairie watersheds.
 ###### VegetationHeight_RawData.csv
 Estimates of vegetation height (dm) collected during monthly sampling events on Konza Prairie watersheds.
+###### BurnHistories.csv
+Burn date and area for each study unit, 1972-2020.
 ###### WatershedCovariates2021.csv
 Management regimes (i.e., fire and grazing) and precipitation for each study unit in 2021.
 ###### KNZPrecip.csv
