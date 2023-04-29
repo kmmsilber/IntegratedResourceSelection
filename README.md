@@ -12,15 +12,15 @@ Silber, K.M.*, T.J. Hefley, H. N. Castro-Miller, Z. R. Ratajczak, W.A. Boyle
 This file includes detailed descriptions of the below datasets and the associated variables.
 
 ###### VegetationComposition_RawData.csv
-Estimates of vegetation composition (i.e., % cover of plant functional groups) collected during monthly sampling events on Konza Prairie watersheds.
+Estimates of vegetation composition collected during in May, June, and July on Konza Prairie, 2014-2021. Vegetation data were collected from three (prior to 2017) or 10 randomly-selected locations on each watershed. We used 5 sets of Daubenmire frame measures to determine percent cover of major plant functional groups (at the center of the plot and 5 m from center at the 4 cardinal directions). Description from Konza Data Portal. Missing values = -9. The dataset used in this study is a subset; the full dataset can be accessed here: http://lter.konza.ksu.edu/content/cbs05-estimates-vegetation-structure-and-composition-collected-konza-prairie-watersheds-and
 ###### VegetationHeight_RawData.csv
-Estimates of vegetation height (dm) collected during monthly sampling events on Konza Prairie watersheds.
+Estimates of vegetation structure collected during in May, June, and July on Konza Prairie, 2014-2021. Vegetation data were collected from three (prior to 2017) or 10 randomly-selected locations on each watershed. We estimated visual obstruction by placing a Robel Pole in the middle, and 5 m from the middle of the plot in each of the 4 cardinal directions. For each pole placement, we stood 4 m away with eye 1 m above the ground in each of 4 directions, and counting the highest 5-cm segment not completely obscured by vegetation. Missing values = -9. The dataset used in this study is a subset; the full dataset can be accessed here: http://lter.konza.ksu.edu/content/cbs05-estimates-vegetation-structure-and-composition-collected-konza-prairie-watersheds-and
 ###### BurnHistories.csv
-Burn date and area for each study unit, 1972-2020.
+Burn date and area for each study unit, 1972-2020. This is the raw dataset that was downloaded in 2021; it can also be accessed here: http://lter.konza.ksu.edu/content/kfh01-konza-prairie-fire-history.
 ###### WatershedCovariates2021.csv
-Management regimes (i.e., fire and grazing) and precipitation for each study unit in 2021.
+Management regimes (i.e., fire and grazing) and precipitation for each study unit at the Konza Prairie in 2021.
 ###### KNZPrecip.csv
-Estimates of Spring precipitation, breeding season precipitation lagged one year, and breeding season precipitation lagged two years at the Konza Prairie. Raw dataset of daily precipitation amounts can be accessed here: http://lter.konza.ksu.edu/content/apt01-daily-precipitation-amounts-measured-multiple-sites-across-konza-prairie
+Estimates of Spring precipitation, breeding season precipitation lagged one year, and breeding season precipitation lagged two years at the Konza Prairie, 1985-2021. Raw dataset of daily precipitation amounts can be accessed here: http://lter.konza.ksu.edu/content/apt01-daily-precipitation-amounts-measured-multiple-sites-across-konza-prairie
 ###### EasternMeadowlarkData.csv
 Mark-resight data for Eastern Meadowlarks at the Konza Prairie, 2019-2021.
 ###### DickcisselData.csv
