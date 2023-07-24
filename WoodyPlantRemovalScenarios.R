@@ -74,3 +74,56 @@ plot_remshrub <- ggplot() +
   coord_fixed()
 
 
+# PLOT ALL REMOVAL SCENARIOS --------------------------------------------------------------------
+
+# woody encroachment
+Shrub_ha <- data.frame(Unit = c("Ungrazed, 2-year fire return", "Ungrazed, 1-year fire return", "Bison-grazed, 1-year fire return", "Patch-burn grazed"), 
+                       enc = c(1.03, 5.13, 9.93, 16.94),
+                       cover = "Shrub")
+
+Shrub_perc <- data.frame(Unit = c("Ungrazed, 2-year fire return", "Ungrazed, 1-year fire return", "Bison-grazed, 1-year fire return", "Patch-burn grazed"), 
+                         enc = c(2.1, 2.9, 8.2, 7.7),
+                         cover = "Shrub")
+
+Tree_ha <- data.frame(Unit = c("Ungrazed, 2-year fire return", "Ungrazed, 1-year fire return", "Bison-grazed, 1-year fire return", "Patch-burn grazed"), 
+                      enc = c(0.05, 4.56, 5.80, 7.70),
+                      cover = "Tree")
+
+Tree_perc <- data.frame(Unit = c("Ungrazed, 2-year fire return", "Ungrazed, 1-year fire return", "Bison-grazed, 1-year fire return", "Patch-burn grazed"), 
+                        enc = c(0.1, 2.5, 4.8, 3.5),
+                        cover = "Tree")
+
+woody_enc <- data.frame(rbind(Shrub_perc, Tree_perc))
+
+woody_enc$Unit <- factor(woody_enc$Unit, levels = c("Ungrazed, 2-year fire return", "Ungrazed, 1-year fire return", "Patch-burn grazed", "Bison-grazed, 1-year fire return"))
+
+enc_plot <- ggplot(data = woody_enc, aes(x = cover, y = enc, fill = Unit)) + 
+  geom_bar(stat = "identity", position = position_dodge(), alpha = 0.8) +
+  theme_pubr() +
+  theme(legend.position = "right") +
+  ylab("Area encroached  (% of pasture)") +
+  xlab("") +
+  scale_x_discrete(labels =  c("Shrubs", "Trees")) +
+  theme(axis.text.x = element_text(angle = 20, vjust = 0.7, size = 12), text = element_text(size = 13)) +
+  scale_fill_manual(values = c("palegreen3", "palegreen4","navajowhite3", "lightsalmon4"), name = "Management Regime")
+
+
+# hectares improvement
+df_removal <- data.frame(rbind(rem_2D, rem_K1B, rem_N1B, rem_PBG))
+
+
+df_removal$Mgmt <- factor(df_removal$Mgmt, levels = c("Ungrazed, 2-year fire return", "Ungrazed, 1-year fire return", "Patch-burn grazed", "Bison-grazed, 1-year fire return"))
+
+improv_plot <- ggplot() + 
+  geom_point(data = df_removal, aes(x = scenario, y = perc * 100, col = Mgmt), size = 5, alpha = 0.8) +
+  theme_pubr() +
+  theme(legend.position = "right") +
+  ylab("Area improved  (% of pasture)") +
+  xlab("") +
+  scale_x_discrete(labels =  c("One shrub", "One tree", "All uplands shrubs", "All uplands trees")) +
+  theme(axis.text.x = element_text(angle = 20, vjust = 0.7, size = 12), text = element_text(size = 13)) +
+  scale_color_manual(values = c("palegreen3", "palegreen4","navajowhite3", "lightsalmon4"), name = "Management Regime")
+
+ggarrange(enc_plot, improv_plot, nrow = 1, ncol = 2, labels = c("A","B"), common.legend = TRUE, legend = "none", align = "hv")
+
+
