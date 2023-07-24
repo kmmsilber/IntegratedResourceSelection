@@ -1,5 +1,107 @@
 
 
+# VALIDATE VEGETATION COMPOSITION -----------------------------------------
+
+# load vegetation composition data
+df_vegcomp2022 <- read.csv("VegetationComposition2022_CleanedData.csv")
+df_vegcomp2022$obs <- 1 #create dummy observer
+colnames(df_vegcomp2022)[c(5,6)] <- c("sx", "sy")
+
+# remove study units off Konza
+df_vegcomp2022 <- df_vegcomp2022[df_vegcomp2022$PlotName != "COA",]
+df_vegcomp2022 <- df_vegcomp2022[df_vegcomp2022$PlotName != "COB",]
+
+
+#### Live Grass #### 
+
+#predict live grass
+df_vegcomp2022$LG.pred <- predict(LG.mod, df_vegcomp2022, type="response", exclude = "s(obs)")
+
+# calculate difference between observed and predicted values
+veg_validation <- df_vegcomp2022
+veg_validation$LG.abs.diff <- abs(df_vegcomp2022$X.LiveGrass-df_vegcomp2022$LG.pred)
+
+
+#### Live Forbs ####
+
+# predict live forbs
+df_vegcomp2022$LF.pred <- predict(LF.mod, df_vegcomp2022, type="response", exclude = "s(obs)")
+
+# calculate difference between observed and predicted values
+veg_validation$LF.abs.diff <- abs(df_vegcomp2022$X.LiveForb-df_vegcomp2022$LF.pred)
+
+
+#### Bare Ground ####
+
+# predict bare ground
+df_vegcomp2022$BG.pred <- predict(BG.mod, df_vegcomp2022, type="response", exclude = "s(obs)")
+
+# calculate difference between observed and predicted values
+veg_validation$BG.abs.diff <- abs(df_vegcomp2022$X.Bare-df_vegcomp2022$BG.pred)
+
+
+#### Dead Grass and Litter ####
+
+# predict dead grass and litter
+df_vegcomp2022$DG.pred <- predict(DG.mod, df_vegcomp2022, type="response", exclude = "s(obs)")
+
+# calculate difference between observed and predicted values
+veg_validation$DG.abs.diff <- abs(df_vegcomp2022$X.DeadAndLitter-df_vegcomp2022$DG.pred)
+
+
+#### Vegetation height ####
+
+# load vegetation height data
+df_veght2022 <- read.csv("VegetationHeight2022_CleanedData.csv")
+df_veght2022$obs <- 1
+
+# remove observations off Konza
+df_veght2022 <- df_veght2022[df_veght2022$plot != "COA",]
+df_veght2022 <- df_veght2022[df_veght2022$plot != "COB",]
+
+# predict vegetation height
+df_veght2022$HT.pred <- predict(HT.mod, df_veght2022, type="response", exclude = "s(obs)")
+
+# calculate difference between observed and predicted values
+veg_htvalidation <- df_veght2022
+veg_htvalidation$abs.diff <- abs(df_veght2022$ht-df_veght2022$HT.pred)
+
+
+
+# Calculate MAE (mean absolute error) ------------------------------------------------------------
+
+
+val_desc <- veg_validation %>%
+  group_by(mgmt) %>%
+  reframe(LG.diff = abs(mean(LG.abs.diff, na.rm = TRUE)),
+            LF.diff = abs(mean(LF.abs.diff, na.rm = TRUE)),
+            BG.diff = abs(mean(BG.abs.diff, na.rm = TRUE)),
+            DG.diff = abs(mean(DG.abs.diff, na.rm = TRUE)))
+
+veg_desc_ht <- veg_htvalidation %>%
+  group_by(mgmt) %>%
+  reframe(HT.diff = mean(abs.diff, na.rm = TRUE) * 0.1)
+
+# Live grass
+mean(val_desc$LG.diff)
+
+# Live forbs
+mean(val_desc$LF.diff)
+
+# Bare ground
+mean(val_desc$BG.diff)
+
+# Dead grass/litter
+mean(val_desc$DG.diff)
+
+# Veg height
+mean(veg_desc_ht$HT.diff)
+
+
+
+# VALIDATE RESOURCE SELECTION -----------------------------------------
+
+
 ### time = 2236 is May 15, 2021
 ### time = 2267 is June 15, 2021
 ### time = 2297 is July 15, 2021
