@@ -1,7 +1,7 @@
 ## Integrated resource selection for grassland songbirds
 This repository contains data and code for the manuscript titled "The long shadow of woody encroachment: an integrated approach to modeling grassland songbird habitat".
 
-Silber, K.M.*, T.J. Hefley, H. N. Castro-Miller, Z. R. Ratajczak, W.A. Boyle 
+Silber, K.M.*, T.J. Hefley, H. N. Castro-Miller, Z. Ratajczak, W.A. Boyle 
 
 *Corresponding author. For any questions about the data or code, please contact Katy Silber (ksilber@ksu.edu).
 
@@ -41,7 +41,7 @@ The first step of the integrated model is cleaning the vegetation data.
 ###### 3. PredictCovariates_FitResourceSelectionFunction.R
 Using the cleaned vegetation data, fit resource selection models to the vegetation and topography data.
 ###### 4. AssessModelPredictiveAccuracy.R
-Assess the predictive accuracy of the resource selection model using a hold-set of Grasshopper Sparrow from 2021.
+Assess the predictive accuracy of the vegetation models using a set of hold-out data from 2022 and resource selection model using a hold-set of Grasshopper Sparrow from 2021.
 ###### 5. WoodyPlantRemovalScenarios.R
 Run a series of woody plant removal scenarios to quanitfy improved habitat.
 ###### 6. ResourceSelectionPlots.R
